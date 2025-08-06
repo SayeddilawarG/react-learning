@@ -1,61 +1,35 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-//React Element
-const title = <h1 className="title">Hello World</h1>;
+
+const Header = () => {
+  return(
+    <div className="header">
+      <div className="logo">
+        <img src="https://i.pinimg.com/736x/81/68/a6/8168a6d3ca80a355fdbadb18b89a960a.jpg" />
+      </div>
+      <div className = "nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  )
+}
+
+const AppLayout = () => {
+  return(
+    <div className="app-layout">
+      <Header />
+      {/* <Body /> */}
+      {/* <Footer /> */}
+    </div>
+  )
+}
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-//React Component
-const HeadingComponent = () => (
-  <h1 className="heading">
-    Hello World React Component returning single line JSX
-  </h1>
-);
-
-//Rendering React Element
-//root.render(title);
-
-//Rendering React Component
-//root.render(<HeadingComponent />);
-
-//convert React ELement to React Component
-const reactelementtoReactcomponent = (
-  <div className="container">
-    <h1>I am react element</h1>
-  </div>
-);
-//root.render(reactelementtoReactcomponent);
-//react component
-
-const ReactElementComponent = () => {
-  return (
-    <div className="container">
-      <h1>I am React Element Component</h1>
-    </div>
-  );
-};
-
-//root.render(<ReactElementComponent />)
-
-//react elements
-const reactElement = <h1>Hey I am react element</h1>;
-//or
-const reactElement2 = <h1> Hey I am react element2 </h1>;
-//or
-const reactElement3 = <h1>Hey I am react element3 </h1>;
-//root.render(reactElement3)
-
-//react component
-const ReactComponent = () => <h1>Hello I am a React Component</h1>;
-//or
-const ReactComponent2 = () => {
-  return (
-    <div>
-      <ReactComponent />
-      <h1>Hello I am a React Component 2</h1>
-    </div>
-  );
-};
-
-root.render(<ReactComponent2 />);
+root.render(<AppLayout />);
