@@ -1,3 +1,4 @@
+import {LOGO_URL} from "../Utils/constant"; 
 const Header = () => {
   const headingStyle = {
     title: {
@@ -8,7 +9,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo">
-        <img src="https://i.pinimg.com/736x/81/68/a6/8168a6d3ca80a355fdbadb18b89a960a.jpg" />
+        <img src={LOGO_URL} />
       </div>
       <div style={headingStyle.title}>
         <h1>Welcome to Hello Resturant</h1>
