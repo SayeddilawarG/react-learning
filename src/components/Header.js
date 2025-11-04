@@ -1,5 +1,7 @@
 import {LOGO_URL} from "../Utils/constant"; 
+import { useState } from "react";
 const Header = () => {
+  const[btnLogin, setBtnLogin] = useState("Login");
   const headingStyle = {
     title: {
       color: "white",
@@ -20,6 +22,10 @@ const Header = () => {
           <li>About</li>
           <li>Contact</li>
           <li>Cart</li>
+          <button className="Login" onClick={() => {
+          btnLogin === "Login" ? setBtnLogin("Logout") : setBtnLogin("Login");
+          console.log(btnLogin);
+          }}>{btnLogin}</button>
         </ul>
       </div>
     </div>
